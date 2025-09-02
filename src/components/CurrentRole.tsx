@@ -2,7 +2,7 @@ import currentRoleIllustration from "@/assets/current-role-illustration.jpg";
 
 const CurrentRole = () => {
   return (
-    <section className="section-dark py-20 px-6">
+    <section className="section-dark py-20 ">
       <div className="container mx-auto max-w-7xl">
         {/* Section Title */}
         <div className="text-center mb-12 animate-slide-up">

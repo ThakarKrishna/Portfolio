@@ -30,7 +30,7 @@ const TechnicalExpertise = () => {
   ];
 
   return (
-    <section id="skills" className="section-light py-20 px-6">
+    <section id="skills" className="section-light py-20 ">
 
       <div className="container mx-auto max-w-7xl">
         {/* Section Title */}

@@ -86,15 +86,15 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="py-20 px-6 bg-background relative overflow-hidden">
+        <section id="projects" className="py-20  bg-background relative overflow-hidden">
 
             <div className="container mx-auto max-w-7xl relative z-10">
 
                 {/* Section Header */}
                 <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                    // initial={{ opacity: 0, y: 40 }}
+                    // whileInView={{ opacity: 1, y: 0 }}
+                    // // transition={{ duration: 0.6 }}
                     viewport={{ once: true }}
                     className="text-center mb-14"
                 >

@@ -14,8 +14,9 @@ const EducationCarousel = () => {
       institution: "Gujarat Technological University (GTU)",
       period: "2019 – 2023",
       grade: "CGPA: 8.8 / 10",
-      focus: "Focused on Data Structures, Web Development, and Software Engineering.",
-      color: "from-purple-500 to-pink-500"
+      focus:
+        "Focused on Data Structures, Web Development, and Software Engineering.",
+      color: "from-purple-500 to-pink-500",
     },
     {
       icon: School,
@@ -23,8 +24,9 @@ const EducationCarousel = () => {
       institution: "Gujarat State Board",
       period: "2017 – 2019",
       grade: "Percentage: 70.0%",
-      focus: "Science Stream with Mathematics, Physics, Chemistry and Computer Science.",
-      color: "from-blue-500 to-teal-500"
+      focus:
+        "Science Stream with Mathematics, Physics, Chemistry and Computer Science.",
+      color: "from-blue-500 to-teal-500",
     },
     {
       icon: BookOpen,
@@ -32,13 +34,14 @@ const EducationCarousel = () => {
       institution: "Gujarat State Board",
       period: "2015 – 2017",
       grade: "Percentage: 84.0%",
-      focus: "Foundation in Mathematics, Science, and English with excellent academic performance.",
-      color: "from-green-500 to-emerald-500"
-    }
+      focus:
+        "Foundation in Mathematics, Science, and English with excellent academic performance.",
+      color: "from-green-500 to-emerald-500",
+    },
   ];
 
   return (
-    <section id="education" className="section-dark py-20 px-6">
+    <section id="education" className="section-dark py-20">
       <div className="container mx-auto max-w-7xl">
         {/* Section Title */}
         <div className="text-center mb-16 animate-slide-up">
@@ -48,17 +51,30 @@ const EducationCarousel = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          <Carousel className="w-full" opts={{ align: "start", loop: true }}>
+          <Carousel
+            className="w-full"
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+          >
             <CarouselContent className="-ml-2 md:-ml-4">
               {educationData.map((edu, index) => {
                 const IconComponent = edu.icon;
                 return (
-                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem
+                    key={index}
+                    className="pl-2 md:pl-4 
+                               basis-full sm:basis-3/4 
+                               md:basis-1/2 lg:basis-1/3"
+                  >
                     <Card className="bg-card/50 border border-border/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 animate-slide-up h-full">
                       <div className="p-6">
                         <div className="flex flex-col items-center text-center space-y-4">
                           {/* Icon */}
-                          <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${edu.color} flex items-center justify-center flex-shrink-0`}>
+                          <div
+                            className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${edu.color} flex items-center justify-center flex-shrink-0`}
+                          >
                             <IconComponent className="w-8 h-8 text-white" />
                           </div>
 
