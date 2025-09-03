@@ -3,6 +3,7 @@ import { ExternalLink, Mail, Download, Github } from "lucide-react";
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
 import AnimatedBubbles from "./AnimatedBubbles";
+import { config } from "@/config/constants";
 
 const Hero = () => {
   const titleVariants = {
@@ -80,7 +81,7 @@ const Hero = () => {
             </motion.h1>
           </motion.div>
 
-          {/* GitHub Icon */}
+          {/* Description */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -88,9 +89,11 @@ const Hero = () => {
           >
             <p className="text-body text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               I'm a Full Stack Developer skilled in{" "}
-              <b>React.js, Next.js, Node.js, Sequelize, and SQL</b>. I enjoy
-              building scalable web applications with clean code, smooth
-              performance, and intuitive user experiences.
+              <span className="text-primary font-semibold">
+                React.js, Next.js, Node.js, Sequelize, and SQL
+              </span>
+              . I enjoy building scalable web applications with clean code,
+              smooth performance, and intuitive user experiences.
             </p>
           </motion.div>
 
@@ -107,22 +110,13 @@ const Hero = () => {
               <Button
                 size="default"
                 className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-6 py-2.5 text-base font-medium rounded-lg transition-all duration-300 shadow-sm hover-glow"
-                onClick={() => window.open("/krishna-resume.pdf", "_blank")}
+                onClick={() => window.open(config.resumeUrl, "_blank")}
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download Resume
               </Button>
             </motion.div>
-            <motion.a
-              href="https://github.com/ThakarKrishna"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors duration-200 border border-white/20"
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Github className="w-5 h-5" />
-            </motion.a>
+
             {/* Social Icons */}
             <motion.div
               className="flex space-x-4"
@@ -131,10 +125,21 @@ const Hero = () => {
               transition={{ delay: 1.2 }}
             >
               <motion.a
-                href="https://www.linkedin.com/in/krishna-thakar-110683219"
+                href={config.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors duration-200"
+                className="w-12 h-12 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary border border-primary/20 transition-colors duration-200"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Github className="w-5 h-5" />
+              </motion.a>
+
+              <motion.a
+                href={config.linkedinUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary border border-primary/20 transition-colors duration-200"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -149,8 +154,8 @@ const Hero = () => {
 
               {/* Email Icon */}
               <motion.a
-                href="#contact"
-                className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors duration-200"
+                href={`mailto:${config.email}`}
+                className="w-12 h-12 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary border border-primary/20 transition-colors duration-200"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
