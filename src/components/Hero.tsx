@@ -60,7 +60,7 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
           >
-            <motion.h3
+            <motion.h1
               className="text-hero font-bold leading-tight"
               variants={titleVariants}
             >
@@ -77,7 +77,7 @@ const Hero = () => {
               >
                 Full Stack Developer
               </motion.span>
-            </motion.h3>
+            </motion.h1>
           </motion.div>
 
           {/* GitHub Icon */}

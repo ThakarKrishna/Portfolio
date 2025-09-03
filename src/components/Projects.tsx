@@ -92,7 +92,7 @@ const Projects = () => {
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Section Header */}
         <div className="text-center mb-14">
-          <div className="text-center mb-16">
+          <div className="text-center mb-5">
             <h2 className="text-section-title font-bold">
               <span className="text-gradient">Projects & Work Showcase</span>
             </h2>

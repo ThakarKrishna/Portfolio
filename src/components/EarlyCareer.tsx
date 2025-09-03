@@ -64,15 +64,15 @@ export default function ExperienceTimeline() {
                 bg-gradient-to-r from-primary to-primary/80 rounded-full shadow-lg 
                 left-1/2 -translate-x-1/2 top-0 md:top-auto"
               >
-                <Briefcase className="w-5 h-5 text-white" />
+                <Briefcase className="w-5 h-5 timeline-icon" />
               </div>
 
               {/* Timeline Card */}
               <div
                 className={`w-full md:w-5/12 p-6 bg-card text-card-foreground rounded-2xl shadow-lg 
-                  transition hover:shadow-2xl mt-12 md:mt-0 border border-border ${
-                    index % 2 === 0 ? "md:ml-12" : "md:mr-12"
-                  }`}
+                    transition hover:shadow-2xl mt-12 md:mt-0 border border-border card-hover-effect ${
+                      index % 2 === 0 ? "md:ml-12" : "md:mr-12"
+                    }`}
               >
                 <h3 className="text-xl font-bold text-foreground">
                   {exp.company}

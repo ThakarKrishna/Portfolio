@@ -1,0 +1,68 @@
+Name: Krishna Thakar
+Title: Full Stack Developer
+
+Summary:
+I'm a Full Stack Developer skilled in React.js, Next.js, Node.js, Sequelize, and SQL. I enjoy building scalable web applications with clean code, smooth performance, and intuitive user experiences.
+
+Current Role:
+- OpenXcell (Full Stack Developer, March 2023 - Present): Working on enterprise-level applications, developing scalable solutions, and contributing to team projects with modern technologies.
+
+Skills:
+  - Frontend: React.js, Next.js, Redux Toolkit, Vite, Material UI, Ant Design, WebSockets, Responsive Design
+  - Backend: Node.js, Express.js, Sequelize ORM, REST APIs, Azure Serverless Functions
+  - Databases & Tools: MySQL, MongoDB, Git, API Integration, Authentication & Role Based Access Management
+  - Additional: Fluent in English, Hindi, and Gujarati. Experienced with Google Maps API, CMS Development, and Performance Optimization.
+
+Projects:
+  1. Bandar (Adventure Management Platform)
+     - Vendor Mobile App with real-time promotions & discounts
+     - Customer Web & Mobile booking with secure payments
+     - Admin Panel for vendor approvals, payments & listings
+     *Technologies*: React.js, Sequelize, Serverless Functions, Node.js
+
+  2. BHL (Transport Management System)
+     - Admin Panel with role-based access
+     - GPS tracking & real-time WebSockets monitoring
+     - Trip workflows & optimized fleet management
+     *Technologies*: React.js (Vite), Redux Toolkit, MongoDB, WebSocket
+
+  3. Cribzzz (Property Management Platform)
+     - Interactive property search with Google Maps API
+     - Responsive UI using Ant Design
+     - Supported CMS feature planning & documentation
+     *Technologies*: React.js, Google Maps API, Ant Design
+
+  4. Super Solutions (Service Marketplace)
+     - Dynamic dashboards & admin workflows
+     - Integrated reviews & testimonial features
+     - Optimized UI performance & responsiveness
+     *Technologies*: React.js, Node.js, APIs
+
+  5. RespondSVP (Event Management Platform)
+     - RSVP system with event creation & guest tracking
+     - Multi-role authentication (Admin, Host, Guest)
+     - Admin panel for monitoring events & users
+     *Technologies*: React.js, Node.js, Express.js, MongoDB
+
+  6. Vidola (Mobile Service Marketplace)
+     - CMS with role-based access & approval workflows
+     - Scalable Redux architecture for smooth state
+     - Responsive UI with secure booking & transactions
+     *Technologies*: React.js, Redux, Node.js, REST APIs
+
+Experience:
+  - OpenXcell (Full Stack Developer, March 2023 - Present): Working on enterprise-level applications, developing scalable solutions, and contributing to team projects with modern technologies.
+  - Confiance Business Solutions Inc (Software Engineer, Jan 2022 – Feb 2023): Built and optimized booking/catering platform for African clients. Focused on scaling, UI design, and frontend performance improvements.
+  - DRC Systems (Web Developer, Dec 2021 – May 2022): Developed e-commerce, chat, and news applications with frontend + backend integrations.
+  - Smart Monkey (Web Developer Internship, Dec 2020 – Dec 2021): Learned and applied HTML, CSS, JavaScript by building CRUD systems, chat apps, and small games.
+
+Education:
+  - Bachelor of Engineering (B.E.) in Computer Engineering, Gujarat Technological University (GTU) (2019 – 2023, CGPA: 8.8 / 10): Focused on Data Structures, Web Development, and Software Engineering.
+  - Higher Secondary Certificate (12th), Gujarat State Board (2017 – 2019, Percentage: 70.0%): Science Stream with Mathematics, Physics, Chemistry and Computer Science.
+  - Secondary School Certificate (10th), Gujarat State Board (2015 – 2017, Percentage: 84.0%): Foundation in Mathematics, Science, and English with excellent academic performance.
+
+Contact:
+  - Email: krishnathakat2001@gmail.com
+  - LinkedIn: https://www.linkedin.com/in/krishna-thakar-110683219
+  - GitHub: https://github.com/ThakarKrishna
+  - Location: Ahmedabad, India

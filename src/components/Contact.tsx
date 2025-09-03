@@ -68,7 +68,7 @@ const Contact = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-card border border-border p-6 rounded-xl hover:shadow-lg transition-all duration-300 group hover:border-primary/30">
+                <Card className="bg-card border border-border p-6 rounded-xl hover:shadow-lg transition-all duration-300 group hover:border-primary/30 card-hover-effect">
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <IconComponent className="w-6 h-6 text-primary" />

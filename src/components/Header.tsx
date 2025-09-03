@@ -102,6 +102,15 @@ const Header = () => {
             transition={{ delay: 0.6, duration: 0.5 }}
           >
             <motion.a
+              href="/krishna-resume.pdf"
+              download
+              className="text-foreground hover:text-primary transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Resume
+            </motion.a>
+            <motion.a
               href="https://www.linkedin.com/in/krishna-thakar-110683219"
               target="_blank"
               rel="noopener noreferrer"
