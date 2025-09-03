@@ -32,10 +32,10 @@ export default function ExperienceTimeline() {
     >
       {/* Section Heading */}
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold">
+        <h2 className="text-3xl md:text-4xl font-bold text-white">
           Early Career Experience
         </h2>
-        <p className="mt-4 text-lg text-gray-100 max-w-2xl mx-auto">
+        <p className="mt-4 text-lg text-white/90 max-w-2xl mx-auto">
           A journey of learning, growth, and hands-on experience in web
           development.
         </p>
@@ -44,36 +44,44 @@ export default function ExperienceTimeline() {
       {/* Timeline */}
       <div className="relative max-w-4xl mx-auto">
         {/* Center Line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 
-          bg-gradient-to-b from-pink-500 via-purple-500 to-indigo-500 rounded-full" />
+        <div
+          className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 
+          bg-gradient-to-b from-primary via-primary/80 to-primary/60 rounded-full"
+        />
 
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className={`relative flex md:items-center ${index % 2 === 0 ? "md:justify-start" : "md:justify-end"
-                } flex-col md:flex-row`}
+              className={`relative flex md:items-center ${
+                index % 2 === 0 ? "md:justify-start" : "md:justify-end"
+              } flex-col md:flex-row`}
             >
               {/* Timeline Node */}
-              <div className="absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10 
+              <div
+                className="absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10 
                 flex items-center justify-center w-10 h-10 
-                bg-gradient-to-r from-pink-500 to-indigo-500 rounded-full shadow-lg 
-                left-1/2 -translate-x-1/2 top-0 md:top-auto">
+                bg-gradient-to-r from-primary to-primary/80 rounded-full shadow-lg 
+                left-1/2 -translate-x-1/2 top-0 md:top-auto"
+              >
                 <Briefcase className="w-5 h-5 text-white" />
               </div>
 
               {/* Timeline Card */}
               <div
-                className={`w-full md:w-5/12 p-6 bg-white text-gray-800 rounded-2xl shadow-lg 
-                  transition hover:shadow-2xl mt-12 md:mt-0 ${index % 2 === 0 ? "md:ml-12" : "md:mr-12"
+                className={`w-full md:w-5/12 p-6 bg-card text-card-foreground rounded-2xl shadow-lg 
+                  transition hover:shadow-2xl mt-12 md:mt-0 border border-border ${
+                    index % 2 === 0 ? "md:ml-12" : "md:mr-12"
                   }`}
               >
-                <h3 className="text-xl font-bold text-gray-900">
+                <h3 className="text-xl font-bold text-foreground">
                   {exp.company}
                 </h3>
-                <p className="text-pink-600 font-semibold">{exp.role}</p>
-                <p className="text-sm text-gray-500 mb-3">{exp.duration}</p>
-                <p className="text-gray-700">{exp.description}</p>
+                <p className="text-primary font-semibold">{exp.role}</p>
+                <p className="text-sm text-muted-foreground mb-3">
+                  {exp.duration}
+                </p>
+                <p className="text-foreground">{exp.description}</p>
               </div>
             </div>
           ))}

@@ -6,64 +6,49 @@
 
 @layer base {
   :root {
-    /* Krishna Thakar Portfolio - Updated colors for #0C0524 background */
-    --background: 258 84% 8%;
-    /* #0C0524 converted to HSL */
-    --foreground: 0 0% 100%;
-    /* Pure white text */
+    /* Light theme colors */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
     /* Section specific backgrounds */
-    --hero-bg: 240 30% 8%;
-    /* Dark navy for hero */
-    --section-bg-dark: 240 30% 8%;
-    /* Dark sections */
-    --section-bg-light: 240 25% 12%;
-    /* Slightly lighter for alternating */
+    --hero-bg: 210 40% 98%;
+    --section-bg-dark: 210 40% 96%;
+    --section-bg-light: 210 40% 98%;
     --early-career-bg: 45 100% 65%;
-    /* Golden yellow background */
 
-    /* Skill card exact colors from screenshots */
+    /* Skill card colors */
     --skill-frontend: 41 100% 58%;
-    /* Bright yellow/orange */
-    --skill-backend: 351 83% 64%;
-    /* Red/pink */
-    --skill-database: 199 89% 64%;
-    /* Blue */
+    --skill-backend: 199 89% 64%;
+    --skill-database: 280 100% 70%;
 
-    /* Gradient colors for text */
-    --gradient-start: 280 100% 70%;
-    /* Purple */
-    --gradient-mid: 320 100% 70%;
-    /* Pink */
-    --gradient-end: 41 100% 58%;
-    /* Orange */
+    /* Gradient colors for text - Blue to Green */
+    --gradient-start: 199 89% 64%;
+    --gradient-mid: 160 84% 39%;
+    --gradient-end: 142 76% 36%;
 
     /* Button and accent colors */
-    --btn-primary: 270 91% 65%;
-    /* Purple primary */
-    --btn-primary-hover: 280 91% 70%;
-    /* Lighter purple on hover */
-    --btn-outline: 0 0% 100%;
-    /* White outline */
+    --btn-primary: 199 89% 64%;
+    --btn-primary-hover: 199 89% 70%;
+    --btn-outline: 240 10% 3.9%;
 
-    /* Standard shadcn variables with portfolio theming */
-    --primary: 270 91% 65%;
+    /* Standard shadcn variables */
+    --primary: 199 89% 64%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 240 30% 15%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 240 20% 20%;
-    --muted-foreground: 240 10% 70%;
-    --accent: 270 91% 65%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 240 10% 3.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 199 89% 64%;
     --accent-foreground: 0 0% 100%;
-    --border: 240 30% 18%;
-    --input: 240 30% 18%;
-    --ring: 270 91% 65%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 199 89% 64%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --popover: 240 30% 8%;
-    --popover-foreground: 0 0% 100%;
-    --card: 240 30% 8%;
-    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
     --radius: 0.5rem;
 
@@ -79,41 +64,74 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark theme colors - improved contrast and readability */
+    --background: 220 25% 10%;
+    --foreground: 0 0% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    /* Section specific backgrounds */
+    --hero-bg: 220 25% 8%;
+    --section-bg-dark: 220 25% 12%;
+    --section-bg-light: 220 25% 15%;
+    --early-career-bg: 45 100% 65%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    /* Skill card colors */
+    --skill-frontend: 41 100% 58%;
+    --skill-backend: 199 89% 64%;
+    --skill-database: 280 100% 70%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Gradient colors for text - Blue to Green */
+    --gradient-start: 199 89% 64%;
+    --gradient-mid: 160 84% 39%;
+    --gradient-end: 142 76% 36%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    /* Button and accent colors */
+    --btn-primary: 199 89% 64%;
+    --btn-primary-hover: 199 89% 70%;
+    --btn-outline: 0 0% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    /* Standard shadcn variables */
+    --primary: 199 89% 64%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 220 25% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 25% 18%;
+    --muted-foreground: 220 15% 75%;
+    --accent: 199 89% 64%;
+    --accent-foreground: 0 0% 98%;
+    --border: 220 25% 25%;
+    --input: 220 25% 25%;
+    --ring: 199 89% 64%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 0 0% 98%;
+    --card: 220 25% 12%;
+    --card-foreground: 0 0% 98%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Sidebar variables */
+    --sidebar-background: 220 25% 15%;
+    --sidebar-foreground: 220 15% 90%;
+    --sidebar-primary: 199 89% 64%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 25% 20%;
+    --sidebar-accent-foreground: 220 15% 90%;
+    --sidebar-border: 220 25% 25%;
+    --sidebar-ring: 199 89% 64%;
+  }
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+  /* Additional theme-aware styles */
+  .light {
+    --header-bg: 0 0% 100%;
+    --header-border: 220 13% 91%;
+    --header-text: 240 10% 3.9%;
+    --header-text-hover: 199 89% 64%;
+  }
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+  .dark {
+    --header-bg: 220 25% 10%;
+    --header-border: 220 25% 25%;
+    --header-text: 0 0% 98%;
+    --header-text-hover: 199 89% 64%;
   }
 }
 
@@ -125,6 +143,7 @@
   body {
     @apply bg-background text-foreground;
     scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   /* Smooth scrolling for all browsers */
@@ -135,35 +154,39 @@
 
 /* Portfolio Custom Styles */
 @layer components {
-
-  /* All sections with consistent dark purple theme */
+  /* All sections with theme-aware backgrounds */
   .section-dark,
   .section-light,
   .hero-section {
-    background: #0C0524;
+    background: hsl(var(--background));
+    transition: background-color 0.3s ease;
   }
 
   .section-early-career {
-    background: linear-gradient(135deg,
-        hsl(45 100% 70% / 1),
-        hsl(40 90% 65% / 1));
+    background: linear-gradient(
+      135deg,
+      hsl(45 100% 70% / 1),
+      hsl(40 90% 65% / 1)
+    );
     color: #000;
   }
 
   .section-contact {
-    background: #0C0524;
+    background: hsl(var(--background));
   }
 
   .hero-section {
-    background: #0C0524;
+    background: hsl(var(--background));
     min-height: 100vh;
   }
 
   .text-gradient {
-    background: linear-gradient(135deg,
-        hsl(var(--gradient-start)),
-        hsl(var(--gradient-mid)),
-        hsl(var(--gradient-end)));
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gradient-start)),
+      hsl(var(--gradient-mid)),
+      hsl(var(--gradient-end))
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -217,13 +240,18 @@
   }
 
   .btn-primary::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
     transition: left 0.5s ease;
   }
 
@@ -248,13 +276,18 @@
   }
 
   .btn-outline::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
     transition: left 0.5s ease;
   }
 
@@ -337,8 +370,6 @@
     transition-delay: 0.3s;
   }
 
-
-
   /* Skill card specific animations */
   .skill-card-animate {
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -351,13 +382,18 @@
   }
 
   .skill-card-animate::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 70%
+    );
     transform: translateX(-100%);
     transition: transform 0.6s ease;
   }
@@ -385,16 +421,16 @@
     animation: pulse 1.5s infinite;
   }
 
-
-
   /* Professional floating elements */
   .floating-element {
     position: absolute;
     border-radius: 50%;
-    background: linear-gradient(135deg,
-        rgba(147, 51, 234, 0.1),
-        rgba(236, 72, 153, 0.1),
-        rgba(251, 146, 60, 0.1));
+    background: linear-gradient(
+      135deg,
+      rgba(147, 51, 234, 0.1),
+      rgba(236, 72, 153, 0.1),
+      rgba(251, 146, 60, 0.1)
+    );
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     animation: float-gentle 15s ease-in-out infinite;
@@ -414,21 +450,31 @@
   }
 
   .glow-orb:nth-child(1) {
-    background: radial-gradient(circle, rgba(147, 51, 234, 0.3) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(147, 51, 234, 0.3) 0%,
+      transparent 70%
+    );
     animation-delay: 0s;
   }
 
   .glow-orb:nth-child(2) {
-    background: radial-gradient(circle, rgba(236, 72, 153, 0.3) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(236, 72, 153, 0.3) 0%,
+      transparent 70%
+    );
     animation-delay: -4s;
   }
 
   .glow-orb:nth-child(3) {
-    background: radial-gradient(circle, rgba(251, 146, 60, 0.3) 0%, transparent 70%);
+    background: radial-gradient(
+      circle,
+      rgba(251, 146, 60, 0.3) 0%,
+      transparent 70%
+    );
     animation-delay: -8s;
   }
-
-
 
   /* Professional card hover effects */
   .card-hover {
@@ -440,13 +486,18 @@
   }
 
   .card-hover::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
     transition: left 0.6s ease;
   }
 
@@ -481,7 +532,7 @@
   }
 
   .text-reveal::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -503,13 +554,18 @@
   }
 
   .skill-card-animate::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    background: linear-gradient(
+      45deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 70%
+    );
     transform: translateX(-100%);
     transition: transform 0.6s ease;
   }
@@ -519,9 +575,21 @@
   }
 }
 
+/* Form input focus states for both themes */
+.light input:focus,
+.light textarea:focus {
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 2px hsl(var(--primary) / 0.2);
+}
+
+.dark input:focus,
+.dark textarea:focus {
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 2px hsl(var(--primary) / 0.3);
+}
+
 /* Enhanced Keyframe Animations */
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0px) rotate(0deg);
@@ -619,7 +687,6 @@
 }
 
 @keyframes pulse {
-
   0%,
   100% {
     opacity: 1;
@@ -633,7 +700,6 @@
 }
 
 @keyframes pulse-glow {
-
   0%,
   100% {
     box-shadow: 0 0 20px hsl(var(--btn-primary) / 0.3);
@@ -643,8 +709,6 @@
     box-shadow: 0 0 40px hsl(var(--btn-primary) / 0.6);
   }
 }
-
-
 
 @keyframes textReveal {
   0% {
@@ -657,7 +721,6 @@
 }
 
 @keyframes float-gentle {
-
   0%,
   100% {
     transform: translateY(0px) translateX(0px) rotate(0deg);
@@ -677,7 +740,6 @@
 }
 
 @keyframes glow-pulse {
-
   0%,
   100% {
     opacity: 0.3;
@@ -701,7 +763,6 @@
 }
 
 @keyframes sparkle {
-
   0%,
   100% {
     opacity: 0;
@@ -713,8 +774,6 @@
     transform: scale(1) rotate(180deg);
   }
 }
-
-
 
 @keyframes rise {
   from {
@@ -735,7 +794,12 @@
   left: 0;
   width: 0%;
   height: 3px;
-  background: linear-gradient(90deg, hsl(var(--gradient-start)), hsl(var(--gradient-mid)), hsl(var(--gradient-end)));
+  background: linear-gradient(
+    90deg,
+    hsl(var(--gradient-start)),
+    hsl(var(--gradient-mid)),
+    hsl(var(--gradient-end))
+  );
   z-index: 9999;
   transition: width 0.1s ease;
 }
@@ -784,8 +848,6 @@
     animation-duration: 0.6s;
   }
 
-
-
   .hover-lift:hover {
     transform: translateY(-6px) scale(1.01);
   }
@@ -823,7 +885,6 @@
 
 /* Performance optimizations */
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
@@ -831,8 +892,6 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-
-
 }
 
 /* Focus states for accessibility */

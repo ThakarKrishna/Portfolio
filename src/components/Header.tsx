@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +41,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-white/10"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -56,11 +57,6 @@ const Header = () => {
           >
             <motion.div
               className="w-9 h-9 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold overflow-hidden shadow-lg"
-              whileHover={{
-                rotate: 360,
-                scale: 1.1,
-                boxShadow: "0 0 20px rgba(147, 51, 234, 0.5)",
-              }}
               transition={{ duration: 0.6 }}
             >
               <img
@@ -73,7 +69,7 @@ const Header = () => {
               />
             </motion.div>
 
-            <span className="text-xl font-bold text-white">
+            <span className="text-xl font-bold text-foreground">
               Krishna Thakar
             </span>
           </motion.div>
@@ -85,7 +81,7 @@ const Header = () => {
                 key={section}
                 data-section={section}
                 onClick={() => scrollToSection(section)}
-                className="text-white hover:text-purple-400 transition-all duration-200 cursor-pointer relative group"
+                className="text-foreground hover:text-primary transition-all duration-200 cursor-pointer relative group"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
@@ -93,7 +89,7 @@ const Header = () => {
                 whileTap={{ scale: 0.95 }}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
-                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 transition-all duration-300 group-hover:w-full"></div>
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/80 transition-all duration-300 group-hover:w-full"></div>
               </motion.button>
             ))}
           </nav>
@@ -106,41 +102,23 @@ const Header = () => {
             transition={{ delay: 0.6, duration: 0.5 }}
           >
             <motion.a
-              href="/krishna-resume.pdf"
-              download
-              className="text-white hover:text-purple-400 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Resume
-            </motion.a>
-            <motion.a
               href="https://www.linkedin.com/in/krishna-thakar-110683219"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:text-purple-400 transition-colors"
+              className="text-foreground hover:text-primary transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               LinkedIn
             </motion.a>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                size="sm"
-                className="bg-purple-600 hover:bg-purple-700 text-white border-none px-6 transition-all duration-300 hover-glow"
-                onClick={() => scrollToSection("contact")}
-
-              >
-                Hire Me
-              </Button>
-            </motion.div>
+            <ThemeToggle />
           </motion.div>
 
           {/* Mobile Hamburger Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white focus:outline-none"
+              className="text-foreground focus:outline-none"
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -151,7 +129,7 @@ const Header = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="md:hidden bg-background/95 backdrop-blur-sm border-t border-white/10"
+            className="md:hidden bg-background/95 backdrop-blur-sm border-t border-border"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -165,7 +143,7 @@ const Header = () => {
                     key={section}
                     data-section={section}
                     onClick={() => scrollToSection(section)}
-                    className="text-white text-center hover:text-purple-400 transition-all duration-200"
+                    className="text-foreground text-center hover:text-primary transition-all duration-200"
                   >
                     {section.charAt(0).toUpperCase() + section.slice(1)}
                   </button>
@@ -173,46 +151,16 @@ const Header = () => {
               </div>
 
               {/* Divider */}
-              <div className="border-t border-white/10 my-4"></div>
+              <div className="border-t border-border my-4"></div>
 
-              {/* Action Buttons */}
-              <div className="flex flex-row space-x-3 justify-center">
-
-                <Button
-                  variant="outline"
-                  className="w-[20%]  text-purple-400 hover:bg-purple-600/20 hover:text-purple-300"
-                  asChild
-                >
-                  <a href="/krishna-resume.pdf" download>Resume</a>
-                </Button>
-
-                <Button
-                  variant="outline"
-                  className="w-[20%] text-blue-400 hover:bg-blue-600/20 hover:text-blue-300"
-                  asChild
-                >
-                  <a
-                    href="https://www.linkedin.com/in/krishna-thakar-110683219"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    LinkedIn
-                  </a>
-                </Button>
-
-                <Button
-                  className="w-[20%] bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:opacity-90"
-                  onClick={() => scrollToSection("contact")}
-
-                >
-                  Hire Me
-                </Button>
+              {/* Theme Toggle Only */}
+              <div className="flex justify-center">
+                <ThemeToggle />
               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-
     </motion.header>
   );
 };

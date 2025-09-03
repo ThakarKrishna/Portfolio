@@ -115,7 +115,7 @@ const Projects = () => {
                 {/* Icon + Title */}
                 <div>
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-blue-500 to-green-500 flex items-center justify-center">
                       <IconComponent className="w-5 h-5 text-white" />
                     </div>
                     <div>
@@ -135,8 +135,8 @@ const Projects = () => {
                         key={i}
                         className="flex items-start space-x-2 text-sm"
                       >
-                        <span className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2"></span>
-                        <span>{feature}</span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2"></span>
+                        <span className="text-foreground">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -146,7 +146,7 @@ const Projects = () => {
                     {project.tech.map((t, i) => (
                       <span
                         key={i}
-                        className="px-2 py-1 text-xs rounded-md bg-purple-500/10 text-purple-400 border border-purple-500/20"
+                        className="px-2 py-1 text-xs rounded-md bg-primary/10 text-primary border border-primary/20"
                       >
                         {t}
                       </span>
@@ -160,7 +160,7 @@ const Projects = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto flex items-center text-sm font-medium text-purple-500 hover:text-pink-500 transition-colors"
+                    className="mt-auto flex items-center text-sm font-medium text-primary hover:text-primary/80 transition-colors"
                   >
                     View Project <ExternalLink className="w-4 h-4 ml-1" />
                   </a>
