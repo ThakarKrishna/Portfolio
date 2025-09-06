@@ -126,6 +126,7 @@ const Contact = () => {
           })}
         </motion.div>
       </div>
+      <footer className="mt-24 border-t border-white/10 pt-12 text-center text-gray-400"> <p> Made with <span className="text-red-500">❤️</span> by Krishna Thakar </p> <p className="text-sm mt-2"> © 2025 Krishna Thakar. All rights reserved. </p> </footer>
     </section>
   );
 };

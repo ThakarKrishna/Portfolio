@@ -1,142 +1,90 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase } from "lucide-react";
-import { motion } from "framer-motion";
-import { config } from "@/config/constants";
 
-const EarlyCareer = () => {
+export default function ExperienceTimeline() {
   const experiences = [
     {
       company: "Confiance Business Solutions Inc",
       role: "Software Engineer",
-      dates: "Jan 2022 – Feb 2023",
+      duration: "Jan 2022 – Feb 2023",
       description:
         "Built and optimized booking/catering platform for African clients. Focused on scaling, UI design, and frontend performance improvements.",
-      url: config.confianceUrl,
     },
     {
       company: "DRC Systems",
       role: "Web Developer",
-      dates: "Dec 2021 – May 2022",
+      duration: "Dec 2021 – May 2022",
       description:
         "Developed e-commerce, chat, and news applications with frontend + backend integrations.",
-      url: config.drcSystemsUrl,
     },
     {
       company: "Smart Monkey",
       role: "Web Developer Internship",
-      dates: "Dec 2020 – Dec 2021",
+      duration: "Dec 2020 – Dec 2021",
       description:
         "Learned and applied HTML, CSS, JavaScript by building CRUD systems, chat apps, and small games.",
-      url: config.smartMonkeyUrl,
     },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0 },
-  };
-
   return (
-    <section className="py-20 bg-gradient-to-br from-[#b36b00] via-[#d1913c] to-[#e8b96a] relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <motion.h2
-            className="text-section-title font-bold text-white mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Early Career Experience
-          </motion.h2>
-          <motion.p
-            className="text-xl text-white/90 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            My journey from internship to software engineering roles
-          </motion.p>
-        </div>
+    <section
+      id="experience"
+      className="py-20 px-6 bg-gradient-to-b from-[#b36b00] via-[#d1913c] to-[#e8b96a] text-white"
+    >
+      {/* Section Heading */}
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-white">
+          Early Career Experience
+        </h2>
+        <p className="mt-4 text-lg text-white/90 max-w-2xl mx-auto">
+          A journey of learning, growth, and hands-on experience in web
+          development.
+        </p>
+      </div>
 
-        <div className="relative max-w-4xl mx-auto">
-          {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-primary/80 to-primary/60"></div>
+      {/* Timeline */}
+      <div className="relative max-w-4xl mx-auto">
+        {/* Center Line */}
+        <div
+          className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 
+          bg-gradient-to-b from-primary via-primary/80 to-primary/60 rounded-full"
+        />
 
-          <motion.div
-            className="space-y-12"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-          >
-            {experiences.map((experience, index) => (
-              <motion.div
-                key={index}
-                className={`flex items-center ${
-                  index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-                }`}
-                variants={itemVariants}
+        <div className="space-y-12">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className={`relative flex md:items-center ${index % 2 === 0 ? "md:justify-start" : "md:justify-end"
+                } flex-col md:flex-row`}
+            >
+              {/* Timeline Node */}
+              <div
+                className="absolute md:left-1/2 md:transform md:-translate-x-1/2 z-10 
+                flex items-center justify-center w-10 h-10 
+                bg-gradient-to-r from-primary to-primary/80 rounded-full shadow-lg 
+                left-1/2 -translate-x-1/2 top-0 md:top-auto"
               >
-                {/* Timeline Node */}
-                <div className="relative z-20">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-primary to-primary/80 flex items-center justify-center border-4 border-white shadow-lg">
-                    <Briefcase className="w-4 h-4 text-white timeline-icon" />
-                  </div>
-                </div>
+                <Briefcase className="w-5 h-5 timeline-icon" />
+              </div>
 
-                {/* Content Card */}
-                <div className={`flex-1 ${index % 2 === 0 ? "ml-8" : "mr-8"}`}>
-                  <Card className="bg-card border-border hover:shadow-lg transition-all duration-300 card-hover-effect">
-                    <CardContent className="p-6">
-                      <div className="space-y-3">
-                        <div>
-                          <h3 className="text-xl font-semibold text-card-foreground">
-                            {experience.url && experience.url !== "#" ? (
-                              <a
-                                href={experience.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:text-primary transition-colors duration-200"
-                              >
-                                {experience.company}
-                              </a>
-                            ) : (
-                              experience.company
-                            )}
-                          </h3>
-                          <p className="text-primary font-medium">
-                            {experience.role}
-                          </p>
-                          <p className="text-sm text-muted-foreground">
-                            {experience.dates}
-                          </p>
-                        </div>
-                        <p className="text-card-foreground leading-relaxed">
-                          {experience.description}
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
+              {/* Timeline Card */}
+              <div
+                className={`w-full md:w-5/12 p-6 bg-card text-card-foreground rounded-2xl shadow-lg 
+                    transition hover:shadow-2xl mt-12 md:mt-0 border border-border card-hover-effect ${index % 2 === 0 ? "md:ml-12" : "md:mr-12"
+                  }`}
+              >
+                <h3 className="text-xl font-bold text-foreground">
+                  {exp.company}
+                </h3>
+                <p className="text-primary font-semibold">{exp.role}</p>
+                <p className="text-sm text-muted-foreground mb-3">
+                  {exp.duration}
+                </p>
+                <p className="text-foreground">{exp.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default EarlyCareer;
+}
