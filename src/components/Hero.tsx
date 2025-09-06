@@ -107,14 +107,14 @@ const Hero = () => {
           >
             {/* Download Resume */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                size="default"
-                className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-6 py-2.5 text-base font-medium rounded-lg transition-all duration-300 shadow-sm hover-glow"
-                onClick={() => window.open(config.resumeUrl, "_blank")}
+              <a
+                href="/krishna-resume.pdf"
+                download="Krishna-Thakar-Resume.pdf" // optional: sets file name
+                className="inline-flex items-center bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-6 py-2.5 text-base font-medium rounded-lg transition-all duration-300 shadow-sm hover-glow"
               >
                 <Download className="w-4 h-4 mr-2" />
                 Download Resume
-              </Button>
+              </a>
             </motion.div>
 
             {/* Social Icons */}
