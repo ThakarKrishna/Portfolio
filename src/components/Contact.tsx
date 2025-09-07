@@ -51,7 +51,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="pt-20 pb-10 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <motion.h2
@@ -126,7 +126,10 @@ const Contact = () => {
           })}
         </motion.div>
       </div>
-      <footer className="mt-24 border-t border-white/10 pt-12 text-center text-gray-400"> <p> Made with <span className="text-red-500">❤️</span> by Krishna Thakar </p> <p className="text-sm mt-2"> © 2025 Krishna Thakar. All rights reserved. </p> </footer>
+      <footer className="mt-24 border-t border-white/10 pt-14 pb-2 text-center text-gray-400">
+        <p>💻 Designed & Built by <span className="text-white">Krishna Thakar</span> © 2025.</p>
+        {/* <p className="text-sm mt-2"> All Rights Reserved.</p> */}
+      </footer>
     </section>
   );
 };

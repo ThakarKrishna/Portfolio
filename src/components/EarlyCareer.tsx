@@ -5,7 +5,7 @@ export default function ExperienceTimeline() {
     {
       company: "Confiance Business Solutions Inc",
       role: "Software Engineer",
-      duration: "Jan 2022 – Feb 2023",
+      duration: "June 2022 – Feb 2023",
       description:
         "Built and optimized booking/catering platform for African clients. Focused on scaling, UI design, and frontend performance improvements.",
     },
