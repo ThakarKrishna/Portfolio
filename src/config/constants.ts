@@ -1,7 +1,7 @@
 // Environment variables for URLs and contact information
 export const config = {
     // Contact Information
-    email: import.meta.env.VITE_EMAIL || 'krishnathakat2001@gmail.com',
+    email: import.meta.env.VITE_EMAIL || 'krishnathakar2001@gmail.com',
     linkedinUrl: import.meta.env.VITE_LINKEDIN_URL || 'https://www.linkedin.com/in/krishna-thakar-110683219',
     linkedinUsername: import.meta.env.VITE_LINKEDIN_USERNAME || 'krishna-thakar-110683219',
     githubUrl: import.meta.env.VITE_GITHUB_URL || 'https://github.com/ThakarKrishna',
